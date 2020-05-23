@@ -1,0 +1,22 @@
+- name: Install packages
+  pacman: 
+    name:
+      - ansible
+      # window manager
+      - sway
+      - swayidle
+      - swaylock
+      # general utilities
+      - base-devel
+      - sudo
+      - vim
+      - ripgrep
+      # communications
+      - telegram-desktop
+      - signal-desktop
+      # graphics
+      - vulkan-intel
+      - vulkan-icd-loader
+      - vulkan-devel
+    update_cache: yes
+    upgrade: yes
