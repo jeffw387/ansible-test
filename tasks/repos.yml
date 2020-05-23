@@ -3,3 +3,17 @@
     path: /home/jeff/pacman.test.conf
     regexp: r"\#[multilib\]\n\#Include.*\n"
     replace: '[multilib]\nInclude = /etc/pacman.d/mirrorlist\n'
+- name: "add multilib"
+  lineinfile:
+    dest: "/home/jeff/pacman.test.conf"
+    state: "present"
+    line: "[multilib]"
+    regexp: "^\\[multilib\\]"
+    insertafter: "^#\\[multilib\\]"
+- name: "add multilib (cont)"
+  lineinfile:
+    dest: "/home/jeff/pacman.test.conf"
+    state: "present"
+    line: "Include = /etc/pacman.d/mirrorlist"
+    insertafter: "^\\[multilib\\]"
+    regexp: "Include = /etc/pacman.d/mirrorlist"
