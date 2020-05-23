@@ -1,5 +1,5 @@
 - name: enable multilib
   replace:
     path: /home/jeff/pacman.test.conf
-    regexp: "\#[multilib\]\n\#Include.*\n"
+    regexp: '\#[multilib\]\n\#Include.*\n'
     replace: '[multilib]\nInclude = /etc/pacman.d/mirrorlist\n'
