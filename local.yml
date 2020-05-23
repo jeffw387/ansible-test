@@ -1,4 +1,4 @@
-- hosts: jeff-laptop
+- hosts: all
   become: true
   tasks:
   - name: Install htop
