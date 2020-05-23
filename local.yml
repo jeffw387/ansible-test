@@ -2,4 +2,4 @@
   become: true
   tasks:
   - name: Install packages
-    pacman: name=['htop', 'mc', 'tmux']
+    pacman: name: ['htop', 'mc', 'tmux']
