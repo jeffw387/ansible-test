@@ -1,13 +1,13 @@
 - name: "add multilib"
   lineinfile:
-    dest: "/home/jeff/pacman.test.conf"
+    dest: "/etc/pacman.conf"
     state: "present"
     line: "[multilib]"
     regexp: "^\\[multilib\\]"
     insertafter: "^#\\[multilib\\]"
 - name: "add multilib (cont)"
   lineinfile:
-    dest: "/home/jeff/pacman.test.conf"
+    dest: "/etc/pacman.conf"
     state: "present"
     line: "Include = /etc/pacman.d/mirrorlist"
     insertafter: "^\\[multilib\\]"
